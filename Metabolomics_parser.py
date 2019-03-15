@@ -24,7 +24,7 @@ for dirpath, dirnames, files in os.walk(topdir):#"walk" in directories and get n
         output_csv = tabname + '_clean.csv'      
         if name.lower().endswith(exten):
             print(tabname)
-            wb = pd.read_excel(os.path.join(dirpath, name), usecols="T,V,AH,AJ,AZ,BJ,BS,BT,BW,DO") #collums with important data 
+            wb = pd.read_excel(os.path.join(dirpath, name), usecols="T,V,AH,AJ,AZ,BJ,BS,BT,BW,DO") #collumns with important data 
             df = pd.DataFrame(wb)
             new_order=[9,1,3,4,5,7,8,2,6,0]#put sample anme, compound names etc in convenient order
             df2 = df[df.columns[new_order]]
